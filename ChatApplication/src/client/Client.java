@@ -103,7 +103,7 @@ public class Client {
                 Message serverMessage;
                 while ((serverMessageString = serverIn.readLine()) != null) {
                     serverMessage = MessageUtils.messageStringToObject(serverMessageString);
-                    System.out.println( serverMessage.getFromUserName() + ": " + serverMessage.getMessage());
+                    System.out.println("\n" +  serverMessage.getFromUserName() + ": " + serverMessage.getMessage());
                     printUserPrompt();
                 }
             } catch (IOException e) {

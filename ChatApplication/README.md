@@ -13,6 +13,9 @@ To send messages, type recipient followed by colon followed by message(recipient
 
 A minimal multiclient server project using java sockets and threads. Client to server to client communication (not broadcast although it can be implemented). 
 
+### Demo
+![alt text](ChatApplicationDemo.jpg)
+
 
 ### Rules of Communication
 Usernames cannot have spaces
@@ -31,6 +34,8 @@ An example message sent would look like the following:
 ### How it works
 
 The server acts like the middle man of communication, validating and fowarding messages between clients. Each client connected to the server maintains a socket of communication with the server. The server keeps track of each connection through individual threads each maintaining a connection. To send data from a client to server to a client (not broadcast),  the server maintains a hashmap of each thread along with its corresponding clientId( the username its connected to). 
+
+
 
 
 

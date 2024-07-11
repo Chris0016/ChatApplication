@@ -73,13 +73,9 @@ public class ServerThread extends Thread {
                 //if user types exit command
               
     
-                System.out.println(clientMessageString);
+                //System.out.println(clientMessageString);
                 Message clientMessage = MessageUtils.messageStringToObject(clientMessageString);
                 
-
-                System.out.println("HELLO THIS IS COOL");
-                
-
 
                 if (clientMessage.getMessageType().equals(MessageType.CLOSE_CONNECTION)){
                     try {
@@ -89,8 +85,6 @@ public class ServerThread extends Thread {
                         e.printStackTrace();
                     }
                     return;
-                } else {
-                    System.out.println("not a quit message");
                 }
 
 

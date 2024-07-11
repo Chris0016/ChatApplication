@@ -14,8 +14,8 @@ public class MessageUtils {
         Matcher matcher = MESSAGE_PATTERN.matcher(message);
 
        if (!matcher.matches()) {
-            System.out.println("Error matcher does not match!!!");
-            System.out.println("Arguement Given: \n"+ message);
+            // System.out.println("Error matcher does not match!!!");
+            // System.out.println("Arguement Given: \n"+ message);
 
             throw new IllegalArgumentException("Invalid Message Format");
        }
@@ -30,7 +30,7 @@ public class MessageUtils {
 
         // Convert messageTypeStr to MessageType enum
         MessageType messageType = MessageType.valueOf(messageTypeStr.toUpperCase()); // Assuming messageType is always uppercase
-        System.out.println("No error converting message type");
+        //System.out.println("No error converting message type");
 
 
         String  messageExtracted = matcher.group(4);
